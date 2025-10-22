@@ -17,7 +17,7 @@ const HomeScreen = ({ onSearch }) => {
       onSearch(parsed);
       setError('');
     } else {
-      setError('Invalid code. Use format like "LIT 101".');
+      setError('Invalid code. Use format like "LIT 101".'); // Note currently erroring on all those not supported (only LIT is supported)
     }
   };
   
