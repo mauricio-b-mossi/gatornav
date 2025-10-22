@@ -1,56 +1,68 @@
 export const buildingData = {
-  'LIT': {
-    name: 'Little Hall',
-    location: 'University of Florida, Little Hall, Gainesville, FL',
-    entrances: ['Main (North)', 'West Plaza', 'East Courtyard'],
+  LIT: {
+    name: "Little Hall",
+    location: "University of Florida, Little Hall, Gainesville, FL",
+    entrances: ["Main (North)", "West Plaza", "East Courtyard"],
     floors: {
-      '1': {
-        // A simplified representation of the first floor layout
-        svgViewBox: "0 0 300 200",
+      1: {
+        // Map room numbers to the IDs you will use in your SVG
         rooms: [
-          { id: '101', label: '101', x: 40, y: 165 },
-          { id: '103', label: '103', x: 80, y: 165 },
-          { id: '105', label: '105', x: 120, y: 165 },
-          { id: '109', label: '109', x: 160, y: 165 },
-          { id: '121', label: '121', x: 250, y: 165 },
-          { id: '110', label: '110', x: 250, y: 35 },
+          { number: "101", id: "room-101" },
+          { number: "102", id: "room-102" },
+          { number: "103", id: "room-103" },
+          { number: "104", id: "room-104" },
+          { number: "105", id: "room-105" },
+          { number: "106", id: "room-106" },
+          { number: "107", id: "room-107" },
+          { number: "108", id: "room-108" },
+          { number: "109", id: "room-109" },
+          { number: "110", id: "room-110" },
+          { number: "111", id: "room-111" },
+          { number: "112", id: "room-112" },
+          { number: "113", id: "room-113" },
+          { number: "114", id: "room-114" },
+          { number: "115", id: "room-115" },
+          { number: "116", id: "room-116" },
         ],
-        // Pre-defined SVG paths from entrances to rooms
-        paths: {
-          'Main (North)': {
-            '101': "M 150 10 L 150 140 L 40 140",
-            '103': "M 150 10 L 150 140 L 80 140",
-            '105': "M 150 10 L 150 140 L 120 140",
-            '109': "M 150 10 L 150 140 L 160 140",
-            '121': "M 150 10 L 150 140 L 250 140",
-            '110': "M 150 10 L 150 60 L 250 60",
-          },
-          'West Plaza': {
-            '101': "M 10 100 L 40 100 L 40 140",
-            '103': "M 10 100 L 80 100 L 80 140",
-            '105': "M 10 100 L 120 100 L 120 140",
-            '109': "M 10 100 L 160 100 L 160 140",
-            '121': "M 10 100 L 250 100 L 250 140",
-            '110': "M 10 100 L 100 100 L 100 60 L 250 60",
-          },
-           'East Courtyard': {
-            '101': "M 290 100 L 180 100 L 180 140 L 40 140",
-            '103': "M 290 100 L 180 100 L 180 140 L 80 140",
-            '105': "M 290 100 L 180 100 L 180 140 L 120 140",
-            '109': "M 290 100 L 180 100 L 180 140 L 160 140",
-            '121': "M 290 100 L 250 100 L 250 140",
-            '110': "M 290 100 L 250 100 L 250 60",
-          },
+
+        // Map entrance names to the entrance IDs you will use in your SVG
+        entranceIdMap: {
+          "North Entrance": "north-entrance",
+          "South Entrance": "south-entrance",
+          "East Entrance": "east-entrance",
+          "West Entrance": "west-entrance"
         },
-        elements: [ // Hallways, stairs, etc.
-            { type: 'path', d: "M 30 150 L 270 150", stroke: '#9ca3af', strokeWidth: '15'}, // Main Hallway
-            { type: 'path', d: "M 150 15 L 150 150", stroke: '#9ca3af', strokeWidth: '15'}, // North Hallway
-            { type: 'path', d: "M 250 40 L 250 150", stroke: '#9ca3af', strokeWidth: '15'}, // East Hallway
-            { type: 'rect', x: 5, y: 90, width: 20, height: 20, fill: '#d1d5db', label: 'Stairs' },
-            { type: 'rect', x: 275, y: 90, width: 20, height: 20, fill: '#d1d5db', label: 'Elev' }
-        ]
-      }
-    }
+      },
+      2: {
+        // Map room numbers to the IDs you will use in your SVG
+        // NOTE: The 'id' fields MUST match the static IDs in the SVG.
+        // The 'number' field provides the dynamic label.
+        rooms: [
+          { number: "201", id: "room-101" }, // SVG ID is room-101
+          { number: "202", id: "room-102" }, // SVG ID is room-102
+          { number: "203", id: "room-103" },
+          { number: "204", id: "room-104" },
+          { number: "205", id: "room-105" },
+          { number: "206", id: "room-106" },
+          { number: "207", id: "room-107" },
+          { number: "208", id: "room-108" },
+          { number: "209", id: "room-109" },
+          { number: "210", id: "room-110" },
+          { number: "211", id: "room-111" },
+          { number: "212", id: "room-112" },
+          { number: "213", id: "room-113" },
+          { number: "214", id: "room-114" },
+          { number: "215", id: "room-115" },
+          { number: "216", id: "room-116" }, // SVG ID is room-116
+        ],
+
+        // Map entrance names to the entrance IDs you will use in your SVG
+        entranceIdMap: {
+          "West Staircase": "west-stairs",
+          "East Staircase": "east-stairs",
+        },
+      },
+    },
   },
-  // Add other buildings like 'CSE' here in the future
+  // TODO: Add other buildings like 'CSE' here in the future
 };
