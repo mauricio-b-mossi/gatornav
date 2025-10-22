@@ -17,7 +17,7 @@ const HomeScreen = ({ onSearch }) => {
       onSearch(parsed);
       setError('');
     } else {
-      setError('Invalid code. Use format like "LIT 101".'); // Note currently erroring on all those not supported (only LIT is supported)
+      setError('Invalid code. Use format like "LIT 0101".'); // Note currently erroring on all those not supported (only LIT is supported)
     }
   };
   
@@ -38,7 +38,7 @@ const HomeScreen = ({ onSearch }) => {
             value={classCode}
             onChange={(e) => setClassCode(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
-            placeholder="Enter class code (e.g., LIT 101)"
+            placeholder="Enter class code (e.g., LIT 0101)"
             className="grow w-full px-4 py-3 text-lg border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
           />
           <button

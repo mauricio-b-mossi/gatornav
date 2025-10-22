@@ -17,7 +17,7 @@ const InteriorScreen = ({ selectedClass, onBack }) => {
 
   const rotateMap = () => setRotation((r) => (r + 90) % 360);
 
-  const floorNumber = parseInt(selectedClass.room.toString().charAt(0), 10);
+  const floorNumber = parseInt(selectedClass.room.toString().substring(0, 2), 10);
   console.log(floorNumber);
   const floor = building.floors[floorNumber];
 

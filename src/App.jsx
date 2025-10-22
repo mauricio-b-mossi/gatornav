@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-// PSEUDO-DATABASE WITH MAPPING:
-// - building code -> building name
-// - building name -> location
-// - etc
-import {buildingData} from '../buildingData';
-
 
 // SCREENS
 import HomeScreen from './Screens/HomeScreen';
