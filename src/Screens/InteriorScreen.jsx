@@ -62,7 +62,7 @@ const InteriorScreen = ({ selectedClass, onBack }) => {
         &larr; Back
       </button>
       <div className="text-center mb-6">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900">
           {selectedClass.building} - Floor {floorNumber}
         </h1>
         <p className="text-lg text-gray-600">
@@ -85,7 +85,7 @@ const InteriorScreen = ({ selectedClass, onBack }) => {
                 onClick={() => setSelectedEntrance(entranceName)}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-blue-50 transition border-2 border-transparent hover:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
               >
-                <span className="text-xl font-semibold text-gray-700">
+                <span className="text-xl font-semibold text-gray-900">
                   {entranceName}
                 </span>
               </button>
@@ -108,26 +108,26 @@ const InteriorScreen = ({ selectedClass, onBack }) => {
           <div className="flex gap-2 mb-2">
             <button
               onClick={zoomIn}
-              className="px-3 py-1 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-600"
+              className="px-3 py-1 bg-blue-600 text-white rounded-md shadow-sm hover:scale-105 transition:all duration-300"
             >
               Zoom In (+)
             </button>
             <button
               onClick={zoomOut}
-              className="px-3 py-1 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-600"
+              className="px-3 py-1 bg-blue-600 text-white rounded-md shadow-sm hover:scale-105 transition:all duration-300"
             >
               Zoom Out (-)
             </button>
             <button
               onClick={resetZoom}
-              className="px-3 py-1 bg-gray-200 text-black rounded-md shadow-sm hover:bg-gray-300"
+              className="px-3 py-1 bg-gray-200 text-gray-900 rounded-md shadow-sm hover:scale-105 transition:all duration-300 "
             >
               Reset Zoom
             </button>
 
             <button
               onClick={rotateMap}
-              className="px-3 py-1 bg-green-500 text-white rounded-md shadow-sm hover:bg-green-600"
+              className="px-3 py-1 bg-green-500 text-white rounded-md shadow-sm hover:scale-105 transition:all duration-300"
             >
               Rotate (↻ {rotation}°)
             </button>
@@ -141,7 +141,7 @@ const InteriorScreen = ({ selectedClass, onBack }) => {
                      style={{ width: '100%', height: 'auto' }} 
                    />
                 </div> */}
-          <div className="border rounded-lg overflow-auto h-[60vh] bg-gray-100 cursor-grab active:cursor-grabbing flex justify-center items-center">
+          <div className="border rounded-lg overflow-auto h-[60vh] bg-gray-200 cursor-grab active:cursor-grabbing flex justify-center items-center">
             <div
               className="relative"
               style={{

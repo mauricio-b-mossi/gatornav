@@ -16,10 +16,10 @@ const OptionsScreen = ({
       >
         &larr; Back to Search
       </button>
-      <h1 className="text-3xl font-bold text-gray-800">
+      <h1 className="text-3xl font-bold text-gray-900">
         {selectedClass.fullCode}
       </h1>
-      <p className="text-xl text-gray-600 mb-8">
+      <p className="text-lg text-gray-600 mb-8">
         Building: {selectedClass.building}
       </p>
 
@@ -28,13 +28,13 @@ const OptionsScreen = ({
           href={googleMapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full md:w-auto flex-1 bg-green-500 text-white font-bold py-4 px-6 rounded-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-105 shadow-lg text-lg text-center"
+          className="w-full md:w-auto flex-1 bg-green-500 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-lg text-center"
         >
           Navigate to Building
         </a>
         <button
           onClick={onEnterBuilding}
-          className="w-full md:w-auto flex-1 bg-blue-600 text-white font-bold py-4 px-6 rounded-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg text-lg"
+          className="w-full md:w-auto flex-1 bg-blue-600 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-lg"
         >
           I'm at the building
         </button>

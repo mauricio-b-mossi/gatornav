@@ -59,7 +59,7 @@ const HomeScreen = ({ onSearch }) => {
 
       {recentSearches.length > 0 && (
         <div className="mt-12">
-          <h2 className="text-xl font-semibold text-gray-700 mb-4">
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">
             Recent Searches
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
@@ -67,7 +67,7 @@ const HomeScreen = ({ onSearch }) => {
               <button
                 key={search.fullCode}
                 onClick={() => handleRecentClick(search.fullCode)}
-                className="bg-gray-200 text-gray-800 px-4 py-2 rounded-full hover:bg-gray-300 transition"
+                className="bg-gray-200 text-gray-900 px-4 py-2 rounded-full hover:bg-gray-300 transition"
               >
                 {search.fullCode}
               </button>
