@@ -36,7 +36,7 @@ const OptionsScreen = ({
           onClick={onEnterBuilding}
           className="w-full md:w-auto flex-1 bg-blue-600 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-lg"
         >
-          I'm at the building
+          I'm at the Building
         </button>
       </div>
     </div>
