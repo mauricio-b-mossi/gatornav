@@ -14,7 +14,6 @@ export default function FirstFloor({
     );
   }
 
-  console.log(source, dest)
 
   const roomLabels = floorData.rooms.reduce((acc, room) => {
     if (room && room.id && room.number) {

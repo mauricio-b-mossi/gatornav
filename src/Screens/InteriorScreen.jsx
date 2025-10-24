@@ -19,7 +19,7 @@ const InteriorScreen = ({ selectedClass, onBack }) => {
     selectedClass.room.toString().substring(0, 2),
     10
   );
-  console.log(floorNumber);
+
   const floor = building.floors[floorNumber];
 
   if (!floor) {
