@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { buildingData } from "../../buildingData";
-// Import your new component
-import Floorplan from "./Floorplan";
 
 const InteriorScreen = ({ selectedClass, onBack }) => {
   const [selectedEntrance, setSelectedEntrance] = useState(null);
@@ -15,7 +13,7 @@ const InteriorScreen = ({ selectedClass, onBack }) => {
 
   const [rotation, setRotation] = useState(0);
 
-  const rotateMap = () => setRotation((r) => (r + 90) % 360);
+  const rotateMap = () => setRotation((r) => (r + 90));
 
   const floorNumber = parseInt(
     selectedClass.room.toString().substring(0, 2),
@@ -129,7 +127,7 @@ const InteriorScreen = ({ selectedClass, onBack }) => {
               onClick={rotateMap}
               className="px-3 py-1 bg-green-500 text-white rounded-md shadow-sm hover:scale-105 transition:all duration-300"
             >
-              Rotate (↻ {rotation}°)
+              Rotate (↻ {rotation % 360}°)
             </button>
           </div>
           {/* <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-2 w-full">
@@ -152,7 +150,7 @@ const InteriorScreen = ({ selectedClass, onBack }) => {
                 height: rotation % 180 !== 0 ? "auto" : "auto",
               }}
             >
-              <Floorplan
+              <floor.map
                 floorData={floor}
                 floorNumber={floorNumber}
                 source={entranceId}

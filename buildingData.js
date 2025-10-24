@@ -1,3 +1,6 @@
+import FirstFloor from "./src/Floorplans/LittleHall/FirstFloor";
+import SecondFloor from "./src/Floorplans/LittleHall/SecondFloor";
+
 export const buildingData = {
   LIT: {
     name: "Little Hall",
@@ -5,64 +8,65 @@ export const buildingData = {
     entrances: ["Main (North)", "West Plaza", "East Courtyard"],
     floors: {
       1: {
-        // Map room numbers to the IDs you will use in your SVG
+        map: FirstFloor,
+        // Map room numbers to the NEW IDs (room1-room8) in counter-clockwise U-shape
         rooms: [
-          { number: "0101", id: "room-101" },
-          { number: "0102", id: "room-102" },
-          { number: "0103", id: "room-103" },
-          { number: "0104", id: "room-104" },
-          { number: "0105", id: "room-105" },
-          { number: "0106", id: "room-106" },
-          { number: "0107", id: "room-107" },
-          { number: "0108", id: "room-108" },
-          { number: "0109", id: "room-109" },
-          { number: "0110", id: "room-110" },
-          { number: "0111", id: "room-111" },
-          { number: "0112", id: "room-112" },
-          { number: "0113", id: "room-113" },
-          { number: "0114", id: "room-114" },
-          { number: "0115", id: "room-115" },
-          { number: "0116", id: "room-116" },
+          { number: "0121", id: "room1" }, // Top-Left (was room11)
+          { number: "0119", id: "room2" }, // Bottom-Left (was room21)
+          { number: "0117", id: "room3" }, // Bottom-Center-Left (was room22)
+          { number: "0113", id: "room4" }, // Bottom-Center-Right (was room23)
+          { number: "0109", id: "room5" }, // Bottom-Right (was room2)
+          { number: "0101", id: "room6" }, // Top-Right (was room1)
+          { number: "0127", id: "room7" }, // Top-Center-Right (was room13)
+          { number: "0125", id: "room8" }, // Top-Center-Left (was room12)
         ],
 
-        // Map entrance names to the entrance IDs you will use in your SVG
+        // Map entrance/stair/bathroom names to the IDs you will use in your SVG
         entranceIdMap: {
           "North Entrance": "north-entrance",
           "South Entrance": "south-entrance",
           "East Entrance": "east-entrance",
-          "West Entrance": "west-entrance"
+          "West Entrance": "west-entrance",
         },
+        bathrooms: [
+          { id: "bathroom-men", name: "Men West" },
+          { id: "bathroom-unisex", name: "Unisex Left" },
+          { id: "bathroom-women", name: "Women East" },
+          { id: "bathroom-men-east", name: "Men East" },
+          { id: "bathroom-unisex-right", name: "Unisex Right" },
+        ],
       },
       2: {
-        // Map room numbers to the IDs you will use in your SVG
-        // NOTE: The 'id' fields MUST match the static IDs in the SVG.
-        // The 'number' field provides the dynamic label.
+        map: SecondFloor,
+        // Map room numbers to the NEW IDs (room1-room8)
         rooms: [
-          { number: "0201", id: "room-101" }, // SVG ID is room-101
-          { number: "0202", id: "room-102" }, // SVG ID is room-102
-          { number: "0203", id: "room-103" },
-          { number: "0204", id: "room-104" },
-          { number: "0205", id: "room-105" },
-          { number: "0206", id: "room-106" },
-          { number: "0207", id: "room-107" },
-          { number: "0208", id: "room-108" },
-          { number: "0209", id: "room-109" },
-          { number: "0210", id: "room-110" },
-          { number: "0211", id: "room-111" },
-          { number: "0212", id: "room-112" },
-          { number: "0213", id: "room-113" },
-          { number: "0214", id: "room-114" },
-          { number: "0215", id: "room-115" },
-          { number: "0216", id: "room-116" }, // SVG ID is room-116
+          { number: "0221", id: "room1" },
+          { number: "0223", id: "room2" },
+          { number: "0225", id: "room3" },
+          { number: "0219", id: "room4" },
+          { number: "0217", id: "room5" },
+          { number: "0215", id: "room6" },
+          { number: "0235", id: "room7" },
+          { number: "0237", id: "room8" },
+          { number: "0201", id: "room9" },
+          { number: "0205", id: "room10" },
+          { number: "0207", id: "room11" },
         ],
 
         // Map entrance names to the entrance IDs you will use in your SVG
         entranceIdMap: {
-          "West Staircase": "west-stairs",
-          "East Staircase": "east-stairs",
+          "Left Staircase": "left-stairs",
+          "Center Staircase": "center-stairs",
+          "Right Staircase": "right-stairs",
         },
+        bathrooms: [
+          { id: "bathroom-men", name: "Men West" },
+          { id: "bathroom-unisex", name: "Unisex Left" },
+          { id: "bathroom-women", name: "Women East" },
+          { id: "bathroom-men-east", name: "Men East" },
+          { id: "bathroom-unisex-right", name: "Unisex Right" },
+        ],
       },
     },
   },
-  // TODO: Add other buildings like 'CSE' here in the future
 };
