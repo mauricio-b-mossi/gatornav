@@ -17,7 +17,10 @@ const InteriorScreen = ({ selectedClass, onBack }) => {
 
   const rotateMap = () => setRotation((r) => (r + 90) % 360);
 
-  const floorNumber = parseInt(selectedClass.room.toString().substring(0, 2), 10);
+  const floorNumber = parseInt(
+    selectedClass.room.toString().substring(0, 2),
+    10
+  );
   console.log(floorNumber);
   const floor = building.floors[floorNumber];
 
@@ -80,7 +83,7 @@ const InteriorScreen = ({ selectedClass, onBack }) => {
               <button
                 key={entranceName}
                 onClick={() => setSelectedEntrance(entranceName)}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-blue-50 transition border-2 border-transparent hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-blue-50 transition border-2 border-transparent hover:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
               >
                 <span className="text-xl font-semibold text-gray-700">
                   {entranceName}
@@ -105,13 +108,13 @@ const InteriorScreen = ({ selectedClass, onBack }) => {
           <div className="flex gap-2 mb-2">
             <button
               onClick={zoomIn}
-              className="px-3 py-1 bg-blue-500 text-white rounded-md shadow-sm hover:bg-blue-600"
+              className="px-3 py-1 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-600"
             >
               Zoom In (+)
             </button>
             <button
               onClick={zoomOut}
-              className="px-3 py-1 bg-blue-500 text-white rounded-md shadow-sm hover:bg-blue-600"
+              className="px-3 py-1 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-600"
             >
               Zoom Out (-)
             </button>
